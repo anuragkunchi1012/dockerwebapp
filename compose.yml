@@ -5,8 +5,8 @@ services:
    image: akunchi/flmdevops:dbimage
    ports:
      - "3306:3306"
-   Deploy:
-     Replicas: 3
+   deploy:
+     replicas: 3
 
  application:
    image: akunchi/flmdevops:appimage
@@ -14,5 +14,5 @@ services:
      - "1234:8080"
    depends_on:
      - "devopsdb"
-   Deploy:
-     Replicas: 3
+   deploy:
+     replicas: 3
